@@ -1,0 +1,82 @@
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="get" action="recherche.php">
+										<input type="search" name="query" id="query" placeholder="Chercher" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.php">Accueil</a></li>
+										<li><a href="list_actu.php">Actualités handicap</a></li>
+										<li><a href="list_doc.php">Documentation (tutoriaux)</a></li>
+										<li>
+											<span class="opener">Contact</span>
+											<ul>
+                                                <li><a href="https://twitter.com/handyopensource"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+												<li><a href="https://www.facebook.com/Handyopensource/"><i class="fab fa-facebook"></i> Facebook</a></li>
+												<li><a href="https://discordapp.com/invite/zG7g8cU"><i class="fab fa-discord"></i> Discord</a></li>
+												<li><a href="https://www.forum.dvkbuntu.org/"><i class="far fa-comments"></i> Forum</a></li>
+                                                <li><a href="contact.php"><i class="far fa-envelope"></i> Mail</a></li>
+                                                <li> <a href="donnation.php" class="icons" alt="Email" class="icons"><i class="fas fa-hand-holding-usd"></i> Donnation</a></li>
+											</ul>
+										</li>
+										<li><a href="telecharger.php">Télécharger</a></li>
+                                        
+                                        <?php if(isset($_SESSION['admin']) AND $_SESSION['admin'] == 0)
+                                        { ?>
+                                        <li>
+											<span class="opener">Espace membre</span>
+											<ul>
+                                                <li><a href="add_actu.php">Ajouter actualité</a></li>
+                                                <li><a href="add_doc.php">Ajouter doc</a></li>
+                                                <li><a href="deconnexion.php">Se déconnecter</a></li>
+											</ul>
+										</li>
+                                        
+                                        <?php } 
+                                        elseif(isset($_SESSION['admin']) AND $_SESSION['admin'] == 1)
+                                        { ?>
+                                        <li>
+											<span class="opener">Espace admin</span>
+											<ul>
+                                                <li><a href="add_actu.php">Ajouter actualité</a></li>
+                                                <li><a href="add_doc.php">Ajouter doc</a></li>
+                                                <li><a href="add_auteur.php">Ajouter auteur</a></li>
+                                                <li><a href="gestion.php?tri=id">Gestion doc/actu</a></li>
+                                                <li><a href="deconnexion.php">Se déconnecter</a></li>
+											</ul>
+										</li>
+                                        <?php }
+                                        else { ?>
+										<li><a href="connexion.php">Se connecter</a></li>
+                                        <?php } ?>
+                                        
+									</ul>
+								</nav>
+                                 <nav>
+                                     
+									<p><a href="mode.php?id=12" style="color:#000000" alt="Changer les contrastes"><i class="fas fa-low-vision fa-2x" id="icone_oeil"></i></a>&ensp;&nbsp;
+                                    <a href="https://twitter.com/handyopensource" class="icons" alt="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>&ensp;&nbsp;
+                                    <a href="https://www.facebook.com/Handyopensource" class="icons" alt="Facebbok"><i class="fab fa-facebook fa-2x"></i></a>&ensp;&nbsp;
+                                    <a href="https://discord.gg/zG7g8cU" class="icons" alt="discord"><i class="fab fa-discord fa-2x"></i></a>&ensp;&nbsp;
+                                    <a href="https://www.forum.dvkbuntu.org/" class="icons" alt="Le forum"><i class="far fa-comments fa-2x"></i></a>&ensp;&nbsp;
+                                    <a href="contact.php" class="icons" alt="Email" class="icons"><i class="far fa-envelope fa-2x"></i></a>&ensp;&nbsp;
+                                    <a href="donnation.php" class="icons" alt="Email" class="icons"><i class="fas fa-hand-holding-usd fa-2x"></i></a></p>
+								</nav>
+                                
+
+				<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright" style="font-size: 6pt;"> Copyright © 2019 DVKBuntu.  Contenu Copyright © 2005 - 2019 Dev Kubuntu, licence CC BY-SA 4.0 , icônes Copyright Breeze artists GPL 2+. Kubuntu est une marque commerciale de Canonical Ltd.. KDE ® et le logo K Desktop Environment ® (K) sont des marques déposées de KDE eV Legal. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+                            </div>
+					</div>
