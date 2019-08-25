@@ -52,6 +52,9 @@ if(!empty($_SESSION["mode"]))
             elseif($id == 19) {
                 header('Location: telecharger.php');
             }
+            elseif($id == 20) {
+                header('Location: open-source.php');
+            }
             else
             {
                 header('Location: index.php');
@@ -111,6 +114,9 @@ if(!empty($_SESSION["mode"]))
             elseif($id == 19) {
                 header('Location: telecharger.php');
             }
+            elseif($id == 20) {
+                header('Location: open-source.php');
+            }
             else
             {
                 header('Location: index.php');
@@ -169,6 +175,9 @@ else
             }
             elseif($id == 19) {
                 header('Location: telecharger.php');
+            }
+            elseif($id == 20) {
+                header('Location: open-source.php');
             }
             else
             {

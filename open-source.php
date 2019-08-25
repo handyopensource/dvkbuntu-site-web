@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-include 'header.php'; 
+session_start();
 
 if(!empty($_SESSION["mode"]))
 {}
@@ -10,29 +9,7 @@ else
     $_SESSION["mode"] = "clair";
 }
 
-if(isset($_GET['id']))
-{
-    $getid = intval($_GET['id']);
-    $reqdoc = $bdd->prepare('SELECT * FROM documents WHERE id = ?');
-    $reqdoc->execute(array($getid));
-    $actuExist = $reqdoc->rowCount();
-                                    
-    if($actuExist == 1)
-    {
-        $donnees = $reqdoc->fetch();
-    }
-    else
-    {
-        header('Location: erreur.php');    
-    }
-}
-else
-{
-    header('Location: erreur.php');
-}
- 
 ?>
-
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -41,11 +18,9 @@ else
 -->
 <html>
 	<head>
-		<title>DVKBuntu - Documentation</title>
+		<title>DVKBuntu - Open Source</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 		<?php
         if($_SESSION['mode'] == "sombre")
         {?>
@@ -71,7 +46,7 @@ else
 								<header id="header">
 									<a href="index.php" class="logo"><strong>DVKBuntu</strong></a>
 									<ul class="icons">
-                                       <li><a href="mode.php?id=7" style="color: yellow; background-color: black;">Mode malvoyant : </a>&nbsp;<a href="mode.php" style="color:#000000" alt="Changer les contrastes"><i class="fas fa-low-vision fa-lg" id="icone_oeil"></i></a></li>
+                                       <li><a href="mode.php?id=20" style="color: yellow; background-color: black;">Mode malvoyant : </a>&nbsp;<a href="mode.php?id=19" style="color:#000000" alt="Changer les contrastes"><i class="fas fa-low-vision fa-lg" id="icone_oeil"></i></a></li>
                                         <li><a href="https://twitter.com/handyopensource" class="icons-header" alt="Twitter"><i class="fab fa-twitter-square fa-lg"></i></a></li>
                                         <li><a href="https://www.facebook.com/Handyopensource" class="icons-header" alt="Facebbok"><i class="fab fa-facebook fa-lg"></i></a></li>
                                         <li><a href="https://discord.gg/zG7g8cU" class="icons-header" alt="discord"><i class="fab fa-discord fa-lg"></i></a></li>
@@ -82,33 +57,54 @@ else
 									</ul>
 								</header>
 
-
                         <!-- Content -->
 								<section>
-								    <h1><u><?php echo $donnees['titre']; ?></u></h1>
-                                    <h6 style="color: darkgrey;"><i>Ecrit par <?php echo $donnees['auteur']; ?> (relu par un administrateur)</i></h6>
+									<header class="main">
+										<h1>Open Source</h1>
+                                        
+									</header>
 
-                                    <?php if(!empty($donnees['image']))
-                                    { ?>
-                                        <span class="image main"><img src="images/docs/<?php echo $donnees['image']; ?>" alt=""/></span>
-                                    <?php } ?>
-
-
-                                    <p><?php echo $donnees['description']; ?></p>	
-                                    <a href="list_doc.php" alt="">&larr; Retourner à la documentation</a>
-
-                                </section>
+									<p>Handy OpenSource vous propose des solutions libres et open source, le logiciel libre vient s’opposer aux logiciels propriétaires qui imposent des limitations de licences aux utilisateurs. L’objectif du libre est d’offrir plus de libertés aux utilisateurs individuels ou en collectivités quant à l’utilisation des logiciels. Les utilisateurs de logiciels libres doivent avoir la liberté d'exécuter, copier, distribuer, étudier, modifier et améliorer le logiciel. <br/>
+                                    <br/>
+                                    Tout en respectant ces valeurs, nous voulons garantir à tous l'accès à l'informatique. <br/>
+                                    <br/>
+                                    Afin d'y arriver, vous trouverez la liste de liens suivante qui présente les sources des modifications que nous vous proposons :<br/>
+                                    <br/>
+                                    
+                                    </p>
+                                    <table style="width: 100%">
+                                    <tr>
+                                        <th>Le framagit de notre projet</th>
+                                        <th>La page Launchpad de l'équipe</th>
+                                        <th>La page du projet sur Launchpad</th>
+                                        <th>Le PPA du projet sur Launchpad</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/framagit.png" alt=""/></td>
+                                        <td><img src="images/launchpad.png" alt=""/></td>
+                                        <td><img src="images/launchpad_2.png" alt=""/></td>
+                                        <td><img src="images/LogoGenerale.png" alt=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><center><a href="https://framagit.org/groups/handy-open-source/-/shared">framagit.org</a></center></td>
+                                        <td><center><a href="https://launchpad.net/~dvkbuntu">launchpad.net</a></center></td>
+                                        <td><center><a href="https://launchpad.net/dvkbuntu">launchpad.net</a></center></td>
+                                        <td><center><a href="https://launchpad.net/~dvkbuntu/+archive/ubuntu/dvkbuntu-ppa">launchpad.net</a></center></td>
+                                    </tr>
+                                    </table>
+								</section>
+                                
 						</div>
 					</div>
 
-				<!-- Sidebar -->
+				  <!-- Sidebar -->
 					<?php include 'sidebar.html'; ?>
                                                                                                                     
 			</div>
             
             <!--Bottom menu -->
             <div class="navbar-bottom">
-                <a href="mode.php?id=7" alt="Changer les contrastes"><i class="fas fa-low-vision fa-lg"></i></a>
+                <a href="mode.php?id=20" alt="Changer les contrastes"><i class="fas fa-low-vision fa-lg"></i></a>
                 &emsp;
                 <a href="https://twitter.com/handyopensource" class="icons" alt="Twitter"><i class="fab fa-twitter-square fa-lg"></i></a>
                 <a href="https://www.facebook.com/Handyopensource" class="icons" alt="Facebbok"><i class="fab fa-facebook fa-lg"></i></a>

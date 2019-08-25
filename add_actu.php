@@ -25,8 +25,8 @@ if(isset($_SESSION['id']))
 		<title>DVKBuntu - Ajouter actualité</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+       <?php include 'wysiwig.html'; ?>
+						
 						  
 		<?php
         if($_SESSION['mode'] == "sombre")

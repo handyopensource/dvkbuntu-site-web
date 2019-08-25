@@ -33,12 +33,12 @@ else
         }
         else
         {
-            header('Location: register.php');
+            header('Location: index.php');
         }
     }
     else
     {
-        header('Location: register.php');
+        header('Location: index.php');
     }
 }
 
