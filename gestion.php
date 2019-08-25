@@ -366,7 +366,7 @@ if(isset($_POST['envoi']))
                                                     <form method="post">
                                                     <td><input type="hidden" name="id" value="<?php echo $donnees['id']; ?>"/><?php echo $donnees['id']; ?></td>
                                                     <td><?php echo $donnees['nom']; ?></td>
-                                                    <td><?php echo $donnees['email']; ?></td>
+                                                    <td><input type="text" value="<?php echo $donnees['email']; ?>" readonly /></td>
                                                     <td><input type="checkbox" id="admin" name="admin" <?php if($donnees['admin'] == 1) { echo "checked"; }  ?>> <label for="admin">Admin</label></td>
                                                     <td><input type="checkbox" id="auteur_actu" name="auteur_actu" <?php if($donnees['auteur_actu'] == 1) { echo "checked"; }  ?>> <label for="auteur_actu">Actu</label></td>
                                                     <td><input type="checkbox" id="auteur_doc" name="auteur_doc" <?php if($donnees['auteur_doc'] == 1) { echo "checked"; }  ?>><label for="auteur_doc">Doc</label></td>
