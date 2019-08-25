@@ -72,24 +72,39 @@ else
                                     <br/>
                                     
                                     </p>
-                                    <table style="width: 100%">
+                                    <table>
                                     <tr>
-                                        <th>Le framagit de notre projet</th>
-                                        <th>La page Launchpad de l'équipe</th>
-                                        <th>La page du projet sur Launchpad</th>
-                                        <th>Le PPA du projet sur Launchpad</th>
+                                        <th><center>Le framagit de notre projet</center></th>
+                                        <th><center>La page Launchpad de l'équipe</center></th>
+
                                     </tr>
                                     <tr>
-                                        <td><img src="images/framagit.png" alt=""/></td>
-                                        <td><img src="images/launchpad.png" alt=""/></td>
-                                        <td><img src="images/launchpad_2.png" alt=""/></td>
-                                        <td><img src="images/LogoGenerale.png" alt=""/></td>
+                                        <td><center><img src="images/framagit.png" alt=""/></center></td>
+                                        <td><center><img src="images/launchpad.png" alt=""/></center></td>
+
                                     </tr>
                                     <tr>
-                                        <td><center><a href="https://framagit.org/groups/handy-open-source/-/shared">framagit.org</a></center></td>
-                                        <td><center><a href="https://launchpad.net/~dvkbuntu">launchpad.net</a></center></td>
-                                        <td><center><a href="https://launchpad.net/dvkbuntu">launchpad.net</a></center></td>
-                                        <td><center><a href="https://launchpad.net/~dvkbuntu/+archive/ubuntu/dvkbuntu-ppa">launchpad.net</a></center></td>
+                                        <td><center><a href="https://framagit.org/groups/handy-open-source/-/shared">https://framagit.org/groups/handy-open-source/-/shared</a></center></td>
+                                        <td><center><a href="https://launchpad.net/~dvkbuntu">https://launchpad.net/~dvkbuntu</a></center></td>
+
+                                    </tr>
+                                    </table>
+                                    <br/>
+                                    <table>
+                                    <tr>
+
+                                        <th><center>La page du projet sur Launchpad</center></th>
+                                        <th><center>Le PPA du projet sur Launchpad</center></th>
+                                    </tr>
+                                    <tr>
+
+                                        <td><center><img src="images/launchpad_2.png" alt=""/></center></td>
+                                        <td><center><img src="images/LogoGenerale.png" alt=""/></center></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td><center><a href="https://launchpad.net/dvkbuntu">https://launchpad.net/dvkbuntu</a></center></td>
+                                        <td><center><a href="https://launchpad.net/~dvkbuntu/+archive/ubuntu/dvkbuntu-ppa">https://launchpad.net/~dvkbuntu/+archive/ubuntu/dvkbuntu-ppa</a></center></td>
                                     </tr>
                                     </table>
 								</section>
