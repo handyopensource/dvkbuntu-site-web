@@ -104,7 +104,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background-color: white;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
@@ -121,7 +121,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #7F888F;
+		color: #1a1a1a;
 		font-family: 'Luciole', "Open Sans", sans-serif;
 		font-family: 'Luciole', "Open Sans", sans-serif;
 		font-size: 16pt;
@@ -1934,7 +1934,7 @@ input, select, textarea {
 			font-size: 1em;
 			font-weight: 500;
 			padding-left: 2.4em;
-            width: 25em;
+            width: 6em;
 			position: relative;
 		}
 
@@ -3134,12 +3134,22 @@ input, select, textarea {
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		width: 100%;
+        background-image: url('/images/arriere.png');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
 	}
+    @media screen and (max-width: 720px) {
+        #main {
+            background-image: none;
+        }
+    }   
 
 		#main > .inner {
 			padding: 0 6em 0.1em 6em ;
 			margin: 0 auto;
 			max-width: 110em;
+           
 		}
 
 			#main > .inner > section {
@@ -3823,4 +3833,14 @@ input, select, textarea {
 link_list {
     color: #003DB3;
     text-decoration: underline;
+}
+
+.media {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 30%;
+    height: 30;
 }

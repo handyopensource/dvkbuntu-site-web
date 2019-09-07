@@ -41,6 +41,7 @@ if(isset($_POST['envoi']))
 {
     $titre = htmlspecialchars($_POST['titre']);
     $description = $_POST['description'];
+
     
     if(!empty($titre) AND !empty($description))
     {
@@ -308,8 +309,6 @@ if(isset($_POST['envoi']))
 		<title>DVKBuntu - Valider actu</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 		<?php
         if($_SESSION['mode'] == "sombre")
         {?>
@@ -382,7 +381,8 @@ if(isset($_POST['envoi']))
                                             </div>
                                             <hr/>
                                             <div class="col-6 col-12-small">
-                                                <textarea name="description" maxlength="5000" rows="9"><?php echo $donnees['description'] ?></textarea>
+                                                <textarea name="description" id="texte" maxlength="5000" rows="9"><?php echo $donnees['description'] ?></textarea>
+                                                
                                             </div>
                                             <!-- Break -->
                                             <div class="col-12">

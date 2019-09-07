@@ -133,7 +133,7 @@ if(isset($_SESSION['id']))
             }
             else
             {
-                header('Location: add_actu.php');
+                header('Location: add_actu.php?erreur=1');
             } //fin 4eme condition
         }
         else

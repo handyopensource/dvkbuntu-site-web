@@ -21,7 +21,7 @@ if(isset($_SESSION['id']))
             {
                 $_SESSION['titre'] = htmlspecialchars($_POST['titre']);
                 $texte_demo = $_POST['texte'];
-                $_SESSION['texte'] = htmlspecialchars($_POST['texte']);
+                 $_SESSION['texte'] = str_replace( '&', '&amp;', $_POST['texte']);
             
 ?>
 <!DOCTYPE HTML>
@@ -133,7 +133,7 @@ if(isset($_SESSION['id']))
             }
             else
             {
-                header('Location: add_actu.php');
+                header('Location: add_doc.php?erreur=1');
             } //fin 4eme condition
         }
         else

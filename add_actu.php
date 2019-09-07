@@ -69,7 +69,14 @@ if(isset($_SESSION['id']))
 								<section>
 									<header class="main">
 										<h1>Ajouter une actualité</h1>
-                                        
+                                        <font color="red">
+                                        <?php
+                                            if(isset($_GET['erreur']) AND $_GET['erreur'] == 1)
+                                            {
+                                                echo "Erreur !";
+                                            }
+                                        ?>
+                                        </font>
 									</header>
 
 									<form method="post" action="preview_actu.php">
@@ -79,7 +86,19 @@ if(isset($_SESSION['id']))
                                             </div>
                                             <hr/>
                                             <div class="col-6 col-12-small">
-                                                <textarea name="texte" maxlength="5000" rows="9"><?php if(isset($_POST['texte'])) { echo  $_POST['texte'];} ?></textarea>
+                                                <textarea name="texte" id="texte" maxlength="5000" rows="9"><?php if(isset($_POST['texte'])) { echo  $_POST['texte'];} ?></textarea>
+                                                <script>
+                                            ClassicEditor
+                                            .create( document.querySelector( '#texte' ), {
+                                            ckfinder: {
+                                                uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+                                            },
+                                             removePlugins : ['Table', 'Media'],
+                                            } )
+                                            .catch( error => {
+                                            console.error( error );
+                                            } );                        
+                                                                                    </script>
                                             </div>
                                             <!-- Break -->
                                             <div class="col-12">
