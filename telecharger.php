@@ -65,11 +65,11 @@ else
 									</header>
 
 									<p>DVKBuntu est disponible en image ISO pour architecture 64 bits. Téléchargez là dès maintenant ! <br/>
-                                    Nombre de téléchargements par semaine : <a href="donnation.php?redirect=23344"><img alt="Download DVKBuntu" src="https://img.shields.io/sourceforge/dw/dvkbuntu.svg" ></a>
+                                    Nombre de téléchargements par semaine : <a href="https://sourceforge.net/projects/dvkbuntu/files/latest/download" onClick="alert('Si vous aimez notre projet, soutenez-nous dans la rubrique Donnation, merci !');"><img alt="Download DVKBuntu" src="https://img.shields.io/sourceforge/dw/dvkbuntu.svg" ></a>
                                     <br/>
-                                    Nombre de téléchargements totaux : <a href="donnation.php?redirect=23344"><img alt="Download DVKBuntu" src="https://img.shields.io/sourceforge/dt/dvkbuntu.svg" ></a>
+                                    Nombre de téléchargements totaux : <a href="https://sourceforge.net/projects/dvkbuntu/files/latest/download" onClick="alert('Si vous aimez notre projet, soutenez-nous dans la rubrique Donnation, merci !');"><img alt="Download DVKBuntu" src="https://img.shields.io/sourceforge/dt/dvkbuntu.svg" ></a>
                                     <br/>
-                                    <center><a href="donnation.php?redirect=23344"><img alt="Download DVKBuntu" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a></center>
+                                    <center><a href="https://sourceforge.net/projects/dvkbuntu/files/latest/download" onClick="alert('Si vous aimez notre projet, soutenez-nous dans la rubrique Donnation, merci !');"><img alt="Download DVKBuntu" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a></center>
                                     
                                     </p>
 								</section>
