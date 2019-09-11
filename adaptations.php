@@ -79,7 +79,7 @@ else
 
                                         <div class="mySlides fade">
                                         <div class="numbertext">2 / 3</div>
-                                        <video src="videos/Fonctionnement%20du%20menu%20Acceuil%20DVKbuntu.webm" controls poster="images/logo.png" width="100%" autoplay>Your browser does not support the video tag.</video>
+                                        <video src="videos/Fonctionnement%20du%20menu%20Accueil%20DVKbuntu.webm" controls poster="images/logo.png" width="100%" autoplay>Your browser does not support the video tag.</video>
                                         <div class="text">Fonctionnement du menu d'accueil</div>
                                         </div>
                                         <div class="mySlides fade">
