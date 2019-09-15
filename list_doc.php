@@ -8,6 +8,15 @@ else
 {
     $_SESSION["mode"] = "clair";
 }
+if(isset($_GET['tri']) AND isset($_GET['tri_user']))
+{
+    $tri = htmlspecialchars($_GET['tri']);
+    $tri_user = htmlspecialchars($_GET['tri_user']);
+}
+else
+{
+    header('Location: list_doc.php?tri=id&tri_user=id');
+}
 
 include 'header.php';
 
@@ -65,39 +74,54 @@ include 'header.php';
 									<header class="main">
 										<h1>Documentation (Tutoriaux)</h1>
 									</header>
+                                    <table>
                                         
-									<?php
-                                        
-                                        $reponse = $bdd->query('SELECT * FROM documents WHERE valider = 1  ORDER BY id DESC');
-                                        $actuExist = $reponse->rowCount();
-                                    
-                                        if($actuExist == 0)
-                                        {
-                                            echo "Aucune documentation pour le moment. Revenez plus tard!";
-                                        }
-                                        else
-                                        {
-                                            // On affiche chaque entrée une à une
-                                            while ($donnees = $reponse->fetch())
-                                            { ?>
-                                                <h2><u><a href="doc.php?id=<?php echo $donnees['id']; ?>" class="link_list"><?php echo $donnees['titre']; ?></a></u></h2>
-                                                <?php if(!empty($donnees['image']))
-                                                { ?>
-                                                    <span class="image main"><img src="images/docs/<?php echo $donnees['image']; ?>" alt=""/></span>
-                                                <?php } ?>
-                                                <p><?php  
-                                                $rest = substr($donnees['description'], 0, 369);  
-                                                echo $rest;
-                                                ?>... <u><a href="doc.php?id=<?php echo $donnees['id']; ?>">Voir plus</a></u></p>
-
-                                                <hr class="major" />
-                                            <?php
+                                        <?php
+                                            if($tri == "auteur")
+                                            {
+                                                $reponse = $bdd->query('SELECT * FROM documents ORDER BY auteur');
                                             }
-                                        }
+                                            elseif($tri == "titre")
+                                            {
+                                                $reponse = $bdd->query('SELECT * FROM documents ORDER BY titre');
+                                            }
+                                            else
+                                            {
+                                                $reponse = $bdd->query('SELECT * FROM documents ORDER BY id');
+                                            }
 
-                                        $reponse->closeCursor(); // Termine le traitement de la requête
-                                    
-                                    ?>
+                                            $actuExist = $reponse->rowCount();
+
+                                            if($actuExist == 0)
+                                            {
+                                                echo "Aucune documentation pour le moment. Revenez plus tard!";
+                                            }
+                                            else
+                                            {?>
+                                                <tr>
+                                                    <th><a href="list_doc.php?tri=auteur&tri_user=<?php echo $tri_user; ?>">Auteur</a></th>
+                                                    <th><a href="list_doc.php?tri=titre&tri_user=<?php echo $tri_user; ?>">Titre</a></th>
+                                                    <th>Voir plus</th>
+                                                </tr>
+                                                <?php
+                                                // On affiche chaque entrée une à une
+                                                while ($donnees = $reponse->fetch())
+                                                { ?>
+
+                                                    <tr>
+                                                        <td><?php echo $donnees['auteur']; ?></td>
+                                                        <td><?php echo $donnees['titre']; ?></td>
+                                                        <td><a href="doc.php?id=<?php echo $donnees['id']; ?>">Voir plus</a></td>
+                                                    </tr>
+
+                                                <?php
+                                                }
+                                            }
+
+                                            $reponse->closeCursor(); // Termine le traitement de la requête
+
+                                        ?>
+                                    </table>
                                         
 								</section>
 

@@ -146,7 +146,7 @@ if(isset($_POST['envoi-mail']))
             $mail="handyopensourcedvkbuntu@gmail.com";
             mail($mail,$sujet,$message,$header);
             
-            header("location: index.php?k=678997#contact");
+            header("location: contact.php?k=678997");
         }
         else
         {

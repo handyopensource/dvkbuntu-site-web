@@ -73,18 +73,18 @@ else
                                         <!-- Full-width images with number and caption text -->
                                         <div class="mySlides fade">
                                         <div class="numbertext">1 / 3</div>
-                                        <video src="videos/Changement%20Facteur%20d'%C3%A9chelle.webm" controls poster="images/logo.png" width="100%" autoplay>Your browser does not support the video tag.</video>
+                                        <video src="videos/Changement%20Facteur%20d'%C3%A9chelle.webm" controls poster="images/logo.png" width="100%">Your browser does not support the video tag.</video>
                                         <div class="text">Changement du facteur d'échelle</div>
                                         </div>
 
                                         <div class="mySlides fade">
                                         <div class="numbertext">2 / 3</div>
-                                        <video src="videos/Fonctionnement%20du%20menu%20Accueil%20DVKbuntu.webm" controls poster="images/logo.png" width="100%" autoplay>Your browser does not support the video tag.</video>
+                                        <video src="videos/Fonctionnement%20du%20menu%20Accueil%20DVKbuntu.webm" controls poster="images/logo.png" width="100%">Your browser does not support the video tag.</video>
                                         <div class="text">Fonctionnement du menu d'accueil</div>
                                         </div>
                                         <div class="mySlides fade">
                                         <div class="numbertext">3 / 3</div>
-                                        <video src="videos/Simple%20Menu.webm" controls poster="images/logo.png" width="100%" autoplay>Your browser does not support the video tag.</video>
+                                        <video src="videos/Simple%20Menu.webm" controls poster="images/logo.png" width="100%" >Your browser does not support the video tag.</video>
                                         <div class="text">Menu simple</div>
                                         </div>
 

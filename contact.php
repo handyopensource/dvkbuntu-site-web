@@ -18,7 +18,7 @@ else
 -->
 <html>
 	<head>
-		<title>DVKBuntu - Se connecter</title>
+		<title>DVKBuntu - Contact</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<?php
@@ -63,6 +63,10 @@ else
 										<h2>Votre avis compte</h2>
 									</header>
 									<p> Vous disposez d'un droit de rétractation, envoyez nous un message et nous supprimerons l'ensemble des informations vous concernant.</p>
+                                    <?php if(isset($_GET['k']) AND $_GET['k'] == 678997)
+                                    { ?>
+                                        <strong><font color="green">Mail envoyé !</font></strong>
+                                    <?php } ?>
 
                                     <form method="post" action="mail.php">
                                         <div class="row gtr-uniform">
@@ -76,7 +80,7 @@ else
                                             </div>
                                             <?php } else { ?>
                                             <div class="col-6 col-12-xsmall">
-                                                <input type="text" name="name-mail" id="demo-name" value="" placeholder="Name" required/>
+                                                <input type="text" name="name-mail" id="demo-name" value="" placeholder="Nom" required/>
                                             </div>
                                             <div class="col-6 col-12-xsmall">
                                                 <input type="email" name="email-mail" id="demo-email" value="" placeholder="Email" required/>
