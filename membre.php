@@ -16,13 +16,16 @@ if(isset($_POST['envoi-form']))
         $prenom = htmlspecialchars($_POST['prenom']);
         $email = htmlspecialchars($_POST['email']);
         $pays = htmlspecialchars($_POST['pays']);
+        $texte = htmlspecialchars($_POST['texte']);
+
 
         $nomlength = strlen($nom);
         $prenomlength = strlen($prenom);
         $emaillength = strlen($email);
         $payslenght = strlen($pays);
+        $textelenght = strlen($texte);
 
-        if($nomlength <= 255 AND $prenomlength <= 255 AND $emaillength <= 255 AND $payslength <= 255)
+        if($nomlength <= 255 AND $prenomlength <= 255 AND $emaillength <= 255 AND $payslength <= 255 AND $textelenght < 1000)
         {
             $mail = "comptabilite.handyopensource@dvkbuntu.org";
             if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $email)) // On filtre les serveurs qui rencontrent des bogues.
@@ -44,7 +47,10 @@ if(isset($_POST['envoi-form']))
             <center><h1>Demande d'adhésion</h1></center>
             <br/>
             <p>
-            Nouvelle demande d'adhésion de <strong>".$prenom." ".$nom."</strong>, son adresse mail est <strong>".$email."</strong> et il vient de : <strong>".$pays."</strong>.
+            Nouvelle demande d'adhésion de <strong>".$prenom." ".$nom."</strong>, son adresse mail est <strong>".$email."</strong> et il vient de : <strong>".$pays."</strong>.<br/>
+            <br/>
+            Voici ses motivations : <br/>
+            \"".$texte."\" <br/>
             </p>
             </body>
             </html>";
@@ -437,6 +443,10 @@ if(isset($_POST['envoi-form']))
 
                                                     </select>
 
+                                            </div>
+                                            <!-- Break -->
+                                            <div class="col-12">
+                                                <textarea id="texte" name="texte" placeholder="Votre motivation..." rows="5" maxlength="1000" minlenght="1" required></textarea>
                                             </div>
                                             <!-- Break -->
                                             <div class="col-12">
