@@ -74,7 +74,7 @@ else
                                     </p>
                                     <table>
                                     <tr>
-                                        <th><center>Le framagit de notre projet</center></th>
+                                        <th><center>Le GitHub de notre projet</center></th>
                                         <th><center>La page Launchpad de l'équipe</center></th>
 
                                     </tr>
