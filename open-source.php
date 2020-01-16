@@ -79,12 +79,12 @@ else
 
                                     </tr>
                                     <tr>
-                                        <td><center><img src="images/framagit.png" alt=""/></center></td>
+                                        <td><center><img src="images/GitHub-Mark.png" alt=""/><img src="images/HOS.png" alt=""/></center></td>
                                         <td><center><img src="images/launchpad.png" alt=""/></center></td>
 
                                     </tr>
                                     <tr>
-                                        <td><center><a href="https://framagit.org/groups/handy-open-source/-/shared">https://framagit.org/groups/handy-open-source/-/shared</a></center></td>
+                                        <td><center><a href="https://github.com/handyopensource">https://github.com/handyopensource</a></center></td>
                                         <td><center><a href="https://launchpad.net/~dvkbuntu">https://launchpad.net/~dvkbuntu</a></center></td>
 
                                     </tr>
