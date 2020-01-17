@@ -140,7 +140,7 @@ else
                                     Le <strong>menu d'accueil a été simplifié</strong> et est très simple à prendre en main. Il contient :
                                     </p>
                                     <ul>
-                                        <li>Lien vers le navigateur web (Chromium)</li>
+					<li>Lien vers votre navigateur web (celui définit par défaut)</li>	
                                         <li>Lien vers notre site web</li>
                                         <li>Lien vers notre forum</li>
                                         <li>Lien vers notre discord</li>
